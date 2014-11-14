@@ -1,0 +1,72 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<h:form>
+			<p:toolbar>
+				<p:toolbarGroup align="left">
+					<p:commandButton title="#{messages['button.new']}" icon="ui-icon-document" action="#{assinanteListMB.getNextView}"
+						actionListener="#{assinanteListMB.clear}" ajax="false" />
+
+					<p:commandButton title="#{messages['button.delete']}" icon="ui-icon-trash" onclick="confirmation.show()"
+						type="button" immediate="true" ajax="false" />
+
+					<p:confirmDialog message="#{messages['label.confirm.delete']}" showEffect="bounce" hideEffect="explode"
+						header="#{messages['label.dialog.alert']}!" severity="alert" widgetVar="confirmation">
+
+						<h:commandButton value="#{messages['button.dialog.yes']}" action="#{assinanteListMB.deleteSelection}"
+							actionListener="#{assinanteListMB.clear}" />
+						<h:commandButton value="#{messages['button.dialog.no']}" onclick="confirmation.hide()" type="button" />
+					</p:confirmDialog>
+				</p:toolbarGroup>
+			</p:toolbar>
+			<p:dataTable id="list" var="bean" value="#{assinanteListMB.resultList}">
+				<f:facet name="header">#{messages['assinante.list.table.title']}</f:facet>
+				<p:column style="width:2%;">
+					<h:selectBooleanCheckbox value="#{assinanteListMB.selection[bean.codigoAssinante]}"></h:selectBooleanCheckbox>
+				</p:column>
+				
+				<p:column style="width:5%;" sortBy="#{bean.codigoAssinante}">
+					<f:facet name="header">#{messages['assinante.label.codigoAssinante']}</f:facet>
+					<h:outputText value="#{bean.codigoAssinante}" />
+				</p:column>
+						
+				<p:column sortBy="#{bean.nome}">
+					<f:facet name="header">#{messages['assinante.label.nome']}</f:facet>
+					<h:commandLink action="#{assinanteListMB.getNextView}" actionListener="#{assinanteListMB.clear}">
+						<h:outputText value="#{bean.nome}" />
+						<f:param name="id" value="#{bean.codigoAssinante}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.dataNascimento}">
+					<f:facet name="header">#{messages['assinante.label.dataNascimento']}</f:facet>
+					<h:commandLink action="#{assinanteListMB.getNextView}" actionListener="#{assinanteListMB.clear}">
+						<h:outputText value="#{bean.dataNascimento}" />
+						<f:param name="id" value="#{bean.codigoAssinante}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.tituloEleitor}">
+					<f:facet name="header">#{messages['assinante.label.tituloEleitor']}</f:facet>
+					<h:commandLink action="#{assinanteListMB.getNextView}" actionListener="#{assinanteListMB.clear}">
+						<h:outputText value="#{bean.tituloEleitor}" />
+						<f:param name="id" value="#{bean.codigoAssinante}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.genero}">
+					<f:facet name="header">#{messages['assinante.label.genero']}</f:facet>
+					<h:commandLink action="#{assinanteListMB.getNextView}" actionListener="#{assinanteListMB.clear}">
+						<h:outputText value="#{bean.genero}" />
+						<f:param name="id" value="#{bean.codigoAssinante}" />
+					</h:commandLink>
+				</p:column>
+					
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

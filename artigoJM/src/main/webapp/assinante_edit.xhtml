@@ -1,0 +1,121 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<h:form prependId="false">
+			<p:toolbar>
+				<p:toolbarGroup align="left">
+					<p:commandButton value="#{messages['button.save']}" action="#{assinanteEditMB.insert}"
+						rendered="#{!assinanteEditMB.updateMode}" ajax="false" />
+					<p:commandButton value="#{messages['button.save']}" action="#{assinanteEditMB.update}"
+						rendered="#{assinanteEditMB.updateMode}" ajax="false" />
+					<p:commandButton value="#{messages['button.delete']}" onclick="confirmation.show()"
+						rendered="#{assinanteEditMB.updateMode}" type="button" immediate="true" ajax="false" />
+					<p:confirmDialog message="#{messages['label.confirm.delete']}" showEffect="bounce" hideEffect="explode"
+						header="#{messages['label.dialog.delete']}" severity="alert" widgetVar="confirmation">
+						<h:commandButton value="#{messages['button.dialog.yes']}" action="#{assinanteEditMB.delete}" immediate="true"
+							ajax="false" />
+						<h:commandButton value="#{messages['button.dialog.no']}" onclick="confirmation.hide()" type="button" />
+					</p:confirmDialog>
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<br />
+
+			<p:fieldset legend="#{messages['assinante.label']}" toggleable="true" toggleSpeed="500">
+				<h:panelGrid id="fieldsassinante" columns="3">
+				
+					<h:outputLabel value="#{messages['assinante.label.codigoAssinante']}: " for="codigoAssinante" styleClass="text-input" />
+										
+					<h:outputText id="codigoAssinante" value="#{assinanteEditMB.bean.codigoAssinante}" />
+					
+					<p:message for="codigoAssinante" />
+						
+					<h:outputLabel value="#{messages['assinante.label.nome']}: " for="nome" styleClass="text-input" />
+					
+					<h:inputText id="nome" value="#{assinanteEditMB.bean.nome}"
+						title="#{messages['assinante.alt.nome']}" />
+					
+					<p:message for="nome" />
+						
+					<h:outputLabel value="#{messages['assinante.label.dataNascimento']}: " for="dataNascimento" styleClass="text-input" />
+					
+					<p:calendar id="dataNascimento" value="#{assinanteEditMB.bean.dataNascimento}"
+					   pattern="#{messages['label.date.pattern']}" navigator="true" showButtonPanel="true"
+					   locale="#{locales.currentLocale}" title="#{messages['assinante.alt.dataNascimento']}" />
+							 
+					<p:message for="dataNascimento" />
+						
+					<h:outputLabel value="#{messages['assinante.label.tituloEleitor']}: " for="tituloEleitor" styleClass="text-input" />
+					
+					<h:inputText id="tituloEleitor" value="#{assinanteEditMB.bean.tituloEleitor}"
+						title="#{messages['assinante.alt.tituloEleitor']}" />
+					
+					<p:message for="tituloEleitor" />
+						
+					<h:outputLabel value="#{messages['assinante.label.genero']}: " for="genero" styleClass="text-input" />
+					
+					<p:selectOneMenu id="genero" effect="fade" value="#{assinanteEditMB.bean.genero}">
+						<f:selectItems value="#{assinanteEditMB.genero}" />
+					</p:selectOneMenu>					
+								
+					<p:message for="genero" />
+						
+				</h:panelGrid>
+			</p:fieldset>
+			
+		<p:fieldset legend="#{messages['assinatura.label']}" toggleable="true" toggleSpeed="500">
+			<h:panelGrid id="fieldsassinatura" columns="1"> 
+				<p:commandButton value="#{messages['button.new']}" action="#{assinanteEditMB.addAssinatura}" update="listAssinatura"/>
+				<p:dataTable id="listAssinatura" var="assinatura" value="#{assinanteEditMB.assinaturaList}" rowIndexVar="index">
+						
+			        <p:column>
+  			           <h:outputLabel value="#{messages['assinatura.label.codigoAssinatura']}: " for="codigoAssinatura" styleClass="text-input" />
+						    
+			           <h:outputText id="codigoAssinatura" value="#{assinatura.codigoAssinatura}" />
+				             
+					   <p:message for="codigoAssinatura" />
+			  	   </p:column>					  
+				
+			        <p:column>
+  			           <h:outputLabel value="#{messages['assinatura.label.nomeRevista']}: " for="nomeRevista" styleClass="text-input" />
+						    
+			           <h:inputText id="nomeRevista" value="#{assinatura.nomeRevista}"
+				          title="#{messages['assinatura.alt.nomeRevista']}" />
+						                   
+					   <p:message for="nomeRevista" />
+			  	   </p:column>					  
+				
+			        <p:column>
+  			           <h:outputLabel value="#{messages['assinatura.label.dataInicio']}: " for="dataInicio" styleClass="text-input" />
+						    
+			           <p:calendar id="dataInicio" value="#{assinatura.dataInicio}"
+			  	          pattern="#{messages['label.date.pattern']}" navigator="true" showButtonPanel="true"
+				          locale="#{locales.currentLocale}" title="#{messages['assinatura.alt.dataInicio']}" />
+							        
+					   <p:message for="dataInicio" />
+			  	   </p:column>					  
+				
+			        <p:column>
+  			           <h:outputLabel value="#{messages['assinatura.label.dataFim']}: " for="dataFim" styleClass="text-input" />
+						    
+			           <p:calendar id="dataFim" value="#{assinatura.dataFim}"
+			  	          pattern="#{messages['label.date.pattern']}" navigator="true" showButtonPanel="true"
+				          locale="#{locales.currentLocale}" title="#{messages['assinatura.alt.dataFim']}" />
+							        
+					   <p:message for="dataFim" />
+			  	   </p:column>					  
+				
+				   <p:column>
+					   <f:facet name="header">#{messages['label.action']}</f:facet>
+					   <p:commandButton value="#{messages['button.delete']}" action="#{assinanteEditMB.deleteAssinatura}" ajax="false"/>
+				   </p:column>
+				</p:dataTable>
+			</h:panelGrid>
+		</p:fieldset>
+						
+		</h:form>
+	</ui:define>
+</ui:composition>
