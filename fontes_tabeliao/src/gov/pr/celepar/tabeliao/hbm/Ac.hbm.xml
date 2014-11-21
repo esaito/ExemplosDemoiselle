@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01/09/2006 13:25:28 by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+  <class name="gov.pr.celepar.tabeliao.pojo.Ac" table="tb_ac">
+  	<cache usage="read-write"/>
+    <id name="id" type="long">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">seq_ac</param>
+      </generator>
+    </id>
+    <many-to-one class="gov.pr.celepar.tabeliao.pojo.Ac" fetch="select" name="pai">
+      <column name="id_pai"/>
+    </many-to-one>
+    <property name="nome" type="string">
+      <column name="nome" not-null="true"/>
+    </property>
+    <property name="dn" type="string">
+      <column name="dn" not-null="true"/>
+    </property>
+    <set inverse="true" name="filhos">
+      <key>
+        <column name="id_pai"/>
+      </key>
+      <one-to-many class="gov.pr.celepar.tabeliao.pojo.Ac"/>
+    </set>
+    <set inverse="true" name="certificadosAc">
+      <key>
+        <column name="id_ac" not-null="true"/>
+      </key>
+      <one-to-many class="gov.pr.celepar.tabeliao.pojo.CertificadoAc"/>
+    </set>
+  </class>
+</hibernate-mapping>

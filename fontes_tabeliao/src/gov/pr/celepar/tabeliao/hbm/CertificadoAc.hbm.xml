@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01/09/2006 13:25:28 by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+  <class name="gov.pr.celepar.tabeliao.pojo.CertificadoAc" table="tb_certificado_ac">
+  	<cache usage="read-write"/>
+    <id name="id" type="long">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">seq_certificado_ac</param>
+      </generator>
+    </id>
+    <many-to-one class="gov.pr.celepar.tabeliao.pojo.Ac" fetch="select" name="ac" unique="true" unique-key="uk_ac_serie">
+      <column name="id_ac" not-null="true"/>
+    </many-to-one>
+    <property name="numSerie" type="string" unique="true" unique-key="uk_ac_serie">
+      <column name="num_serie" not-null="true"/>
+    </property>
+    <property name="keyId" type="string" unique="true">
+      <column name="key_id" not-null="true"/>
+    </property>
+    <property name="dtValidadeIni" type="timestamp">
+      <column length="8" name="dt_validade_ini" not-null="true"/>
+    </property>
+    <property name="dtValidadeFim" type="timestamp">
+      <column length="8" name="dt_validade_fim" not-null="true"/>
+    </property>
+    <property name="dtInclusao" type="timestamp">
+      <column length="8" name="dt_inclusao" not-null="true"/>
+    </property>
+    <property name="revogado" type="boolean">
+      <column name="revogado" not-null="true"/>
+    </property>
+    <property name="arquivo" type="binary" unique="true">
+      <column name="arquivo" not-null="true"/>
+    </property>
+    <set inverse="true" name="certificadosPublicos">
+      <key>
+        <column name="id_certificado" not-null="true"/>
+      </key>
+      <one-to-many class="gov.pr.celepar.tabeliao.pojo.CertificadoPublico"/>
+    </set>
+    <set inverse="true" name="certificadosRevogados">
+      <key>
+        <column name="id_certificado" not-null="true" unique="true"/>
+      </key>
+      <one-to-many class="gov.pr.celepar.tabeliao.pojo.CertificadoRevogado"/>
+    </set>
+  </class>
+</hibernate-mapping>

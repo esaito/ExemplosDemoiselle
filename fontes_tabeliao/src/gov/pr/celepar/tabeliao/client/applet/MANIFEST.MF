@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_03-b05 (Sun Microsystems Inc.)
+Main-Class: TabeliaoApplet
+Class-Path: plugin.jar bouncycastleLite.jar
+Implementation-Title: Tabeliao Pinhao
+Implementation-Vendor: CELEPAR - GIC
+Implementation-Vendor-Id: pr.gov.br
+Implementation-Version: 1.3.0

@@ -1,0 +1,102 @@
+LPG-AP
+LICENÇA PÚBLICA GERAL
+PARA PROGRAMAS DE COMPUTADOR
+DA ADMINISTRAÇÃO PÚBLICA
+ 
+Versão 1.1
+30 de maio de 2005
+ 
+1.      PARTES:
+São as partes deste contrato de licença:
+1.1.           O(s) titular(es) dos direitos de autor do PROGRAMA especificado ao final desta LICENÇA - doravante denominado(s) apenas LICENCIANTE -, e
+1.2.           Toda pessoa, física ou jurídica - doravante denominada apenas LICENCIADO - que USAR, PUBLICAR, DISTRIBUIR, REPRODUZIR ou ALTERAR O PROGRAMA especificado abaixo.
+As partes têm entre si justo e acordado firmar o presente CONTRATO DE LICENCIAMENTO DE USO, PUBLICAÇÃO, DISTRIBUIÇÃO, REPRODUÇÃO E ALTERAÇÃO de PROGRAMA DE COMPUTADOR DE CÓDIGO ABERTO, denominado nesta LICENÇA apenas por PROGRAMA.
+2.      TERMOS UTILIZADOS NESTA LICENÇA
+2.1.           O termo "programa de computador" é definido no art. 1º da Lei nº 9.609/98 como "a expressão de um conjunto organizado de instruções em linguagem natural ou codificada, contida em suporte físico de qualquer natureza, de emprego necessário em máquinas automáticas de tratamento da informação, dispositivos, instrumentos ou equipamentos periféricos, baseados em técnica digital ou análoga, para fazê-los funcionar de modo e para fins determinados".
+2.2.           O licenciamento do PROGRAMA inclui as formas de distribuição descritas abaixo:
+2.2.1.    Compilada: termo que representa toda distribuição preparada para ser entendida pelas máquinas às quais se destina a execução do PROGRAMA;
+2.2.2.    Código-fonte: termo que representa a forma adequada para se fazer alterações no PROGRAMA. O código-fonte distribuído deve incluir todos os códigos-fonte de todos os módulos contidos em e necessários ao funcionamento normal do PROGRAMA, mais as rotinas utilizadas para controlar a sua compilação e instalação. Não é necessário incluir no código-fonte nada que já seja normalmente distribuído, não importa se na forma de código-fonte ou compilada, como os componentes do sistema operacional em que o PROGRAMA será executado.
+2.3.           É princípio desta LICENÇA tornar público o conhecimento necessário para a elaboração e compreensão dos mecanismos de funcionamento do PROGRAMA, de forma que toda DISTRIBUIÇÃO se faça acompanhar da forma mais adequada para o estudo e a alteração deste.
+2.4.           LICENÇA ou LPG-AP, doravante, será a forma como este termo de licenciamento será tratado. Os conceitos aqui expressos são aqueles da legislação aplicável, notadamente da Lei 9.610/98.
+3.      OBJETO: LICENCIAMENTO PARA USO, PUBLICAÇÃO, DISTRIBUIÇÃO, REPRODUÇÃO E ALTERAÇÃO DE PROGRAMA DE COMPUTADOR.
+3.1.           Constitui objeto deste contrato o licenciamento não oneroso, por parte do LICENCIANTE ao LICENCIADO, dos direitos de USO, PUBLICAÇÃO, DISTRIBUIÇÃO, REPRODUÇÃO e ALTERAÇÃO, entendidos conforme o artigo 5º da Lei 9.610/98, do PROGRAMA de titularidade do LICENCIANTE.
+3.2.           A gratuidade do licenciamento ora apresentado não obsta a cobrança por outros serviços ou custos, como, por exemplo, o DESENVOLVIMENTO, ADEQUAÇÃO, IMPLANTAÇÃO ou custos de  DISTRIBUIÇÃO do PROGRAMA.
+3.3.           O LICENCIANTE não poderá, após a PUBLICAÇÃO ou a DISTRIBUIÇÃO do PROGRAMA, se opor com relação a quaisquer dos direitos que são objeto deste termo, desde que exercidos em acordo com o ora pactuado.
+3.4.           O PROGRAMA objeto desta LICENÇA não foi colocado em domínio público e sua titularidade continua pertencendo ao LICENCIANTE, independentemente de registro, de acordo com o art. 2°, § 3° da Lei 9.609/98.
+4.      LIMITAÇÃO DE GARANTIAS
+4.1.           Os direitos sobre o PROGRAMA são licenciados sem ônus, não sendo, em nenhuma hipótese, objeto de comercialização. Esta LICENÇA é contrato benéfico, não-oneroso e gracioso, não se aplicando ao PROGRAMA a garantia prevista pelo artigo 8° da Lei 9.609/98 e nem QUAISQUER DAS GARANTIAS previstas pela Lei 8.078/90. O LICENCIANTE não terá obrigação de prestar suporte, assistência ou esclarecimentos ao LICENCIADO.
+4.2.           Como exceção, os titulares dos direitos de autor dos programas de computador derivados poderão garantir a parte que lhes compete, sem qualquer comprometimento dos autores das versões originárias.
+4.3.           Salvo nas hipóteses de ato ilícito, dolo ou má-fé do LICENCIANTE, todos os prejuízos decorrentes do USO, PUBLICAÇÃO, DISTRIBUIÇÃO, REPRODUÇÃO ou ALTERAÇÃO do PROGRAMA são de inteira responsabilidade do LICENCIADO, ou dos respectivos autores de cada ALTERAÇÃO.
+4.4.           Nos termos do artigo 114 do Código Civil e do artigo 4º da Lei 9.610/98, esta LICENÇA será interpretada restritivamente.
+ 
+5.      CONDIÇÕES GERAIS DE LICENCIAMENTO
+5.1.           Fica vedado o USO, PUBLICAÇÃO, DISTRIBUIÇÃO, REPRODUÇÃO ou ALTERAÇÃO do PROGRAMA em desacordo com as condições estabelecidas nesta LICENÇA.
+6.      DIREITOS GERAIS DO LICENCIADO
+6.1.           O LICENCIADO tem o direito de USAR, PUBLICAR, DISTRIBUIR, REPRODUZIR e ALTERAR o PROGRAMA conforme disposto nesta LICENÇA.
+7.      OBRIGAÇÕES GERAIS DO LICENCIADO
+7.1.           Ao aceitar esta LICENÇA, o LICENCIADO obriga-se com todos os seus termos e condições. Caso o LICENCIADO não concorde integralmente com o aqui exposto, não lhe será permitido USAR, PUBLICAR, DISTRIBUIR, REPRODUZIR ou ALTERAR o PROGRAMA.
+7.2.           O LICENCIADO não poderá jamais transformar o PROGRAMA ou parte dele, ou qualquer programa de computador derivado do PROGRAMA ou de parte dele, em:
+7.2.1.    PROGRAMA licenciado mediante pagamento ou contraprestação de qualquer espécie;
+7.2.2.    PROGRAMA distribuído sem o acompanhamento ou a oferta de acompanhamento do respectivo código-fonte.
+7.3.           O LICENCIADO não poderá retirar os créditos do LICENCIANTE pela parte do PROGRAMA que a este compete. Em conformidade com o item 8.3, abaixo, tal retirada poderá ocorrer apenas quando solicitada pelo LICENCIANTE, e como exclusiva forma de exercício do direito moral de oposição a alterações não autorizadas que prejudiquem sua honra ou reputação, conforme previsto no Artigo 2º, Parágrafo 1º da Lei 9.609/98.
+7.4.           Independentemente da efetivação ou não de registro do PROGRAMA perante os órgãos competentes pelo LICENCIANTE, o LICENCIADO também se compromete a não registrar o PROGRAMA ou qualquer aspecto deste, nem buscar qualquer forma equivalente de proteção ou apropriação com o fim de restringir a plena transferência para terceiros de todos os direitos que são objeto desta LICENÇA. Assim, a título de exemplo, o LICENCIADO fica impedido de buscar patentes para o PROGRAMA ou de registrar o nome ou qualquer outro sinal distintivo deste perante o INPI.
+8.      DIREITOS GERAIS DO LICENCIANTE
+8.1.           O LICENCIANTE mantém para si o direito autoral de reivindicação da paternidade do PROGRAMA, conforme previsto na Lei 9.609/98, em seu artigo 2°, parágrafo 1°.
+8.2.           É também direito do LICENCIANTE ter todos os sinais convencionais indicativos de sua autoria, por ele ou a seu pedido apostos, mantidos tal como originalmente os colocou. Esse direito se estende inclusive aos programas de computador derivados.
+8.3.           Entretanto, o LICENCIANTE poderá, a qualquer tempo, solicitar a remoção de todos os sinais convencionais indicativos de sua autoria, por ele ou a seu pedido apostos, de programa de computador derivado do PROGRAMA quando julgar que as alterações nele realizadas possam prejudicar sua honra ou sua reputação.
+9.      OBRIGAÇÕES GERAIS DO LICENCIANTE
+9.1.           O LICENCIANTE deverá sempre DISTRIBUIR o PROGRAMA em duas formas, quais sejam, compilada e código-fonte, observadas as disposições do item 12.1, abaixo.
+9.2.           O LICENCIANTE não poderá jamais revogar qualquer direito aqui cedido; também não poderá alterar os direitos de qualquer versão anterior já licenciada do PROGRAMA.
+9.3.           É obrigação do LICENCIANTE, para que o PROGRAMA possa ser distribuído de acordo com esta LICENÇA, desistir de seu direito de opor-se a alterações ao PROGRAMA. Poderá, caso não concorde com alterações realizadas em programas de computador derivados do PROGRAMA, solicitar a supressão de seus sinais distintivos apostos àquele derivado, em conformidade com o item 8.3 acima.
+10. USO DO PROGRAMA
+10.1.       O USO do PROGRAMA é permitido a todos os interessados, respeitados os termos desta LICENÇA.
+10.1.1.         Por USO entende-se a utilização do PROGRAMA em condições normais, conforme descrito na documentação técnica deste.
+10.1.2.         O USO também pode ser relativo à forma código-fonte do PROGRAMA, destinando-se esta a tornar pública a estrutura da forma compilada do mesmo, bem como permitir o desenvolvimento de novos programas de computador derivados ou que utilizem trechos do PROGRAMA.
+10.2.       Não existe qualquer impedimento para o USO do PROGRAMA para as atividades comerciais do LICENCIADO,  desde que sejam respeitados os termos desta LICENÇA, notadamente as obrigações do item 7 acima.
+10.3.       Nas situações em que trechos do PROGRAMA forem utilizados em outros programas de computador, estes deverão ser licenciados obrigatoriamente por esta LICENÇA. Como exceção à esta regra, o programa de computador que utilizar trechos do PROGRAMA poderá ser licenciado de outra forma desde que seu funcionamento normal independa da parte copiada e que esta seja acompanhada da sua forma código-fonte.
+10.4.       Em relação às obras derivadas do PROGRAMA, entende-se para todos os efeitos como sendo LICENCIANTE o autor das derivações.
+11. PUBLICAÇÃO DO PROGRAMA
+11.1.       O LICENCIADO poderá livremente PUBLICAR o PROGRAMA, em qualquer meio e para qualquer finalidade.
+11.2.       Toda PUBLICAÇÃO do PROGRAMA deverá ser acompanhada de cópia integral desta LICENÇA, que é parte integrante do PROGRAMA, a teor do art. 9º da Lei 9.609/98.
+11.3.       Quando em formato código-fonte, o PROGRAMA deverá conter, no início de todos os arquivos de texto componentes deste, referência a esta LICENÇA, que deverá ser feita da seguinte forma:
+MARCADOR DE INÍCIO DE COMENTÁRIO
+Este programa é licenciado de acordo com a LPG-AP (LICENÇA PÚBLICA GERAL PARA PROGRAMAS DE COMPUTADOR DA ADMINISTRAÇÃO PÚBLICA), versão 1.1 ou qualquer versão posterior.
+A LPG-AP deve acompanhar todas PUBLICAÇÕES, DISTRIBUIÇÕES e REPRODUÇÕES deste Programa.
+Caso uma cópia da LPG-AP não esteja disponível junto com este Programa, você pode contatar o LICENCIANTE ou então acessar diretamente:
+http://www.celepar.pr.gov.br/licenca/LPG-AP.pdf
+Para poder USAR, PUBLICAR, DISTRIBUIR, REPRODUZIR ou ALTERAR este Programa é preciso estar de acordo com os termos da LPG-AP
+MARCADOR DE FINAL DE COMENTÁRIO
+11.4.     Caso o PROGRAMA seja obra coletiva, conforme especificado no item 13, não se aplicará à PUBLICAÇÃO o artigo 88 da Lei 9610/98.
+12. DISTRIBUIÇÃO DO PROGRAMA
+12.1.     Os direitos de DISTRIBUIÇÃO do PROGRAMA aplicam-se às formas compiladas e código-fonte. Poderá o LICENCIADO distribuir o programa concomitantemente nas duas formas citadas (compilada e código-fonte) ou ainda com uma oferta válida de distribuição de ambas as formas, nos termos abaixo.
+12.2.     É vedada a DISTRIBUIÇÃO parcial do PROGRAMA, que inclua apenas o código-fonte ou apenas a forma compilada. Assim, a DISTRIBUIÇÃO deve obedecer a uma das opções abaixo:
+12.2.1.            Incluir a forma compilada e a forma código-fonte completas, o qual terá de ser distribuído em um meio ou midia habitualmente usado para intercâmbio de software; ou,
+12.2.2.            Incluir a forma compilada e uma oferta por escrito, válida por pelo menos três anos, para fornecer a qualquer interessado, por um custo que não seja superior ao seu custo de realizar a distribuição, uma cópia completa, da forma código-fonte correspondente, em um meio ou mídia habitualmente usado para intercâmbio de software; ou,
+12.2.3.                 Incluir a forma compilada e as informações recebidas pelo LICENCIADO quanto à oferta para distribuir o código-fonte correspondente. (Esta alternativa é permitida somente para distribuição não-comercial e apenas se o programa houver sido recebido em sua forma compilada acompanhada dessa oferta, de acordo com o item 12.2.2, acima).
+12.3.     Toda DISTRIBUIÇÃO do PROGRAMA deverá ser acompanhada de cópia desta LICENÇA.
+12.4.     Não existe qualquer óbice à DISTRIBUIÇÃO do PROGRAMA com fins comerciais, desde que fique claro que não haverá cobrança pelo PROGRAMA, mas sim pelos meios e serviços de distribuição.
+13. REPRODUÇÃO DO PROGRAMA
+13.1.       Não há qualquer restrição ao número de cópias do PROGRAMA que o LICENCIADO poderá fazer. Sua REPRODUÇÃO é livre em qualquer meio, mas deverá respeitar as restrições do item 11, de acordo com a destinação de cada REPRODUÇÃO.
+13.2.       Toda REPRODUÇÃO do PROGRAMA deverá ser acompanhada de cópia desta LICENÇA, conforme o item 12.3, acima.
+14. ALTERAÇÃO DO PROGRAMA
+14.1.       É permitido ao LICENCIADO realizar alterações no PROGRAMA. Toda ALTERAÇÃO, entretanto, deverá ser identificada e comentada no código-fonte, para fins de identificação da autoria.
+14.2.       Não é permitido realizar alterações nos créditos e marcas distintivas apostas pelo LICENCIANTE e por qualquer autor de versões originárias, salvo quando permitido expressamente pelo LICENCIANTE.
+14.3.       Os programas de computador resultantes da alteração do PROGRAMA também se sujeitarão a esta LICENÇA, seja novo programa ou apenas nova versão do PROGRAMA.
+14.4.       Os autores do PROGRAMA poderão utilizar outras formas de licenciamento para a sua parte de contribuição, se esta puder ser utilizada separadamente, conforme o artigo 15º, parágrafo 2º da Lei 9.610/98.
+14.5.       O PROGRAMA sujeito à LPG-AP sempre conterá uma referência a esta LICENÇA e ao seu endereço na Internet (URL) em sítio de fácil acesso aos usuários do PROGRAMA.
+14.6.       Nas situações em que o PROGRAMA contar com participações diversas em sua elaboração, este será considerado obra coletiva, nos termos do artigo 5º, VIII, h da Lei 9610/98, ficando os direitos patrimoniais sob responsabilidade do organizador - no presente caso,  o LICENCIANTE.
+14.7.       A inclusão de contribuições de terceiros na obra coletiva aqui licenciada, quando assim caracterizada, presume-se não-onerosa. Os autores outros que não o organizador da obra coletiva abdicam de seus direitos patrimoniais sobre ela, bem como do direito previsto no artigo 88, II da Lei 9.610/98, referente à publicação dos nomes de todos os participantes da obra.
+15. ANEXOS A ESTA LICENÇA
+15.1.       Esta LICENÇA não admite qualquer alteração em seu conteúdo, inclusive para validação de sua integridade. Entretanto, como alternativa para pequenas adaptações ou complementações, ela aceita anexos em arquivos separados, desde que aprovadas pelo LICENCIANTE.
+15.2.       Tais anexos não poderão, em hipótese alguma, conflitar com o conteúdo desta licença, sendo consideradas nulas as disposições que o contrariem.
+15.3.       Quando a LICENÇA estiver acompanhada de anexos, estes serão considerados como integrantes da LICENÇA e deverão acompanhar todos os licenciamentos subseqüentes.
+16. PRAZO
+16.1.       O presente instrumento vigerá pelo prazo de 50 (cinqüenta) anos, nos termos do Art. 2º, parágrafo 2º, da Lei 9.609/98.
+17. CESSAÇÃO DO LICENCIAMENTO
+17.1.       O não-cumprimento de qualquer das cláusulas desta licença ensejará a cessação instantânea de todos os direitos do LICENCIADO sobre o PROGRAMA, sem a necessidade de denunciação deste texto.
+NOVAS VERSÕES DESTA LICENÇA
+17.2.       A versão atual desta LICENÇA, assim como as que a precederam, estará disponível em [http://www.celepar.pr.gov.br/licenca/LPG-AP.pdf].
+17.3.       A redistribuição deste PROGRAMA poderá ser feita utilizando a versão desta LICENÇA que o acompanha ou a última versão disponível no endereço acima citado.
+17.4.       As novas versões da LICENÇA não poderão, entretanto, em hipótese alguma, retirar direitos já garantidos para qualquer das partes na versão em vigor quando da sua aceitação.
+18. FORO
+18.1.       As partes elegem o foro da comarca de residência ou sede do detentor dos direitos de autor do PROGRAMA, com renúncia a qualquer outro, por mais privilegiado que seja, para dirimir as dúvidas e questões oriundas do presente instrumento que não possam ser resolvidas extra-judicial ou administrativamente.

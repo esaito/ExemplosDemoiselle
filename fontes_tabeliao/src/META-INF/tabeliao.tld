@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+ <description>Taglib que mostra o applet de login do Sistema Tabelião</description>
+ <display-name>Tabelião Login</display-name>
+ <tlib-version>1.2.4</tlib-version>
+ <short-name>tabeliao</short-name>
+ <uri>http://celepar.pr.gov.br/taglibs/tabeliao.tld</uri>
+ <tag>
+  <name>login</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.Login</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet de login do sistema Tabelião</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1
+				-&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt;
+				Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O
+				valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor
+				default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>assinaDocumento</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.Assinatura</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet para assinatura de documento do sistema
+			Tabelião.</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1
+				-&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt;
+				Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O
+				valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor
+				default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome do arquivo.</description>
+   <name>nomeArquivo</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Separador de arquivos.</description>
+   <name>separadorArquivo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Anexa o arquivo na assinatura.</description>
+   <name>anexaArquivo</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>assinaturaWeb</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.AssinaturaWeb</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet para assinatura de documento do sistema
+			Tabelião.</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1
+				-&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt;
+				Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O
+				valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome da action.</description>
+   <name>action</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Id do documento. Pode ser utilizado mais que um, nesse caso, eles devem estar separados pelo conjunto de caracteres definidos no idSeparador. Ex: 123;222;321;431;543 (Nesse caso o idSeparador  é igual a ";")</description>
+   <name>id</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Caracter ou conjunto de caracteres que será utilizado
+				para separar os ids.</description>
+   <name>idSeparador</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Classe que implementa o conteudoHandler.</description>
+   <name>conteudoHandler</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>assinarEnvelopedXml</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.AssinaturaEnvelopedXml</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet para assinatura EnvelopedXML.</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1 -&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt; Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome do arquivo. Pode ser mais de um, desde que
+				separados pelo valor do atributo separadorArquivo</description>
+   <name>nomeArquivo</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Separador de arquivos.</description>
+   <name>separadorArquivo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome da Tag para Assinar.</description>
+   <name>nomeTagAssinar</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Id da Politica de Assinatura.</description>
+   <name>politicaId</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>URL da Politica de Assinatura.</description>
+   <name>politicaUri</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>indica se havera ou nao contra assinatura. Aceita os valores "true" ou "on" para contra-assinar</description>
+   <name>contraAssinatura</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>assinarEnvelopedXmlWeb</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.AssinaturaEnvelopedXmlWeb</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet para assinatura EnvelopedXML.</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1
+				-&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt;
+				Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O
+				valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor
+				default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome da action executada pela applet</description>
+   <name>action</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Conteudo(s) do(s) arquivo a ser assinado(em base64), se mais de um, serão separados pelo valor do atributo separadorArquivo</description>
+   <name>conteudosArquivos</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Separador de arquivos.</description>
+   <name>separadorArquivo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome da Tag para Assinar.</description>
+   <name>nomeTagAssinar</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Id da Politica de Assinatura.</description>
+   <name>politicaId</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>URL da Politica de Assinatura.</description>
+   <name>politicaUri</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>indica se havera ou nao contra assinatura. Aceita os valores "true" ou "on" para contra-assinar</description>
+   <name>contraAssinatura</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>assinarEnvelopingXml</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.AssinaturaEnvelopingXml</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet para assinatura EnvelopingXML.</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1 -&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt; Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome do arquivo. Pode ser mais de um, desde que
+				separados pelo valor do atributo separadorArquivo</description>
+   <name>nomeArquivo</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Separador de arquivos.</description>
+   <name>separadorArquivo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Id da Politica de Assinatura.</description>
+   <name>politicaId</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>URL da Politica de Assinatura.</description>
+   <name>politicaUri</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>assinarEnvelopingXmlWeb</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.AssinaturaEnvelopingXmlWeb</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra a applet para assinatura EnvelopingXML.</description>
+  <attribute>
+   <description>O tipo do formulário que será renderizado na tela: 1
+				-&gt; Somente Token, 2 -&gt; Somente Arquivo, 3 -&gt;
+				Token e Arquivo. O Valor default é 3.</description>
+   <name>tipoForm</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O valor que será exibido no botão de ação da applet. O
+				valor Default é 'Ok'.</description>
+   <name>valorBotao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>O caminho default para a biblioteca PKCS#11, o valor
+				default é '/usr/lib/opensc/opensc-pkcs11.so'.</description>
+   <name>caminhoBiblioteca</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Nome da action executada pela applet</description>
+   <name>action</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Conteudo(s) do(s) arquivo a ser assinado (em base64), se mais de um, serão separados pelo valor do atributo separadorArquivo</description>
+   <name>conteudosArquivos</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Separador de arquivos.</description>
+   <name>separadorArquivo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Id da Politica de Assinatura.</description>
+   <name>politicaId</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>URL da Politica de Assinatura.</description>
+   <name>politicaUri</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para o fundo da applet, o default é #FFFFFF
+				(Branco).</description>
+   <name>corFundo</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor dentro da applet.</description>
+   <name>corDentro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor da aba quando está selecionada.</description>
+   <name>corAbaSelecionada</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor natural da aba.</description>
+   <name>corAba</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>mensagemAviso</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.MensagemAviso</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra uma mensagem de aviso do Tabelião, caso exista.</description>
+  <attribute>
+   <description>Classe do css para a mensagem.</description>
+   <name>classe</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Url para o ícone que será mostrado com a mensagem.</description>
+   <name>src</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>mensagemErro</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.MensagemErro</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra uma mensagem de erro do Tabelião, caso exista.</description>
+  <attribute>
+   <description>Classe do css para a mensagem.</description>
+   <name>classe</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Url para o ícone que será mostrado com a mensagem.</description>
+   <name>src</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>infoValidacao</name>
+  <tag-class>gov.pr.celepar.tabeliao.taglibs.InfoValidacao</tag-class>
+  <body-content>empty</body-content>
+  <description>Mostra informações do resultado de validação.</description>
+  <attribute>
+   <description>Objeto do tipo TabeliaoResultadoValidacao.</description>
+   <name>resultadoValidacao</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Margem a ser incluída antes de cada informação.</description>
+   <name>margem</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para as mensagens de OK.</description>
+   <name>corOk</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para as mensagens de Aviso.</description>
+   <name>corAviso</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para as mensagens de Erro.</description>
+   <name>corErro</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <description>Cor para as mensagens de Exceção.</description>
+   <name>corExcecao</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <!-- Temporariamente desabilitado
+		<tag>
+		<description>Mostra informações do certificado do usuário logado.</description>
+		<name>infoCertificado</name>
+		<tag-class>gov.pr.celepar.tabeliao.taglibs.InfoCertificado</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+		<description>Tipo de informação (nome, cpf, tipocertificado, datavalidade, emitido).</description>
+		<name>type</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		</tag>
+	-->
+</taglib>

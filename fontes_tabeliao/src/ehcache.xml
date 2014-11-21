@@ -1,0 +1,44 @@
+<ehcache>
+	<defaultCache 
+		maxElementsInMemory="100" 
+		eternal="false" 
+		timeToIdleSeconds="300" 
+		timeToLiveSeconds="150" 
+		overflowToDisk="false" 
+		diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"/>
+	<cache name="gov.pr.celepar.tabeliao.pojo.Ac"
+     	maxElementsInMemory="200"
+     	eternal="false"
+     	timeToIdleSeconds="300"
+     	timeToLiveSeconds="60000"
+     	overflowToDisk="false"
+     	diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"/>
+	<cache
+     	name="gov.pr.celepar.tabeliao.pojo.CertificadoAc"
+     	maxElementsInMemory="200"
+     	eternal="false"
+     	timeToIdleSeconds="300"
+     	timeToLiveSeconds="60000"
+     	overflowToDisk="false"
+     	diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"/>
+	<cache name="gov.pr.celepar.tabeliao.pojo.CertificadoPublico"
+     	maxElementsInMemory="200"
+     	eternal="false"
+	    timeToIdleSeconds="300"
+     	timeToLiveSeconds="600"
+     	overflowToDisk="false"
+     	diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"/>
+	<cache
+     	name="gov.pr.celepar.tabeliao.pojo.CertificadoRevogado"
+     	maxElementsInMemory="200"
+     	eternal="false"
+     	timeToIdleSeconds="60"
+     	timeToLiveSeconds="60"
+     	overflowToDisk="false"
+     	diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="60"/>  -->
+ </ehcache>

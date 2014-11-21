@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="connection.datasource">java:jdbc/TabeliaoClienteDS</property>
+  <property name="connection.driver_class">org.postgresql.Driver</property>
+  <property name="show_sql">false</property>
+  <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+  <property name="hibernate.cache.use_second_level_cache">true</property> 
+  <property name="hibernate.cache.use_query_cache">true</property>
+  <property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+  
+  <mapping resource="gov/pr/celepar/tabeliao/hbm/Ac.hbm.xml"/>
+  <mapping resource="gov/pr/celepar/tabeliao/hbm/CertificadoAc.hbm.xml"/>
+  <mapping resource="gov/pr/celepar/tabeliao/hbm/CertificadoRevogado.hbm.xml"/>
+  <mapping resource="gov/pr/celepar/tabeliao/hbm/CertificadoPublico.hbm.xml"/>
+  <mapping resource="gov/pr/celepar/tabeliao/hbm/AtualizaLCR.hbm.xml"/>
+
+  <class-cache class="gov.pr.celepar.tabeliao.pojo.Ac" usage="read-write"/>
+  <class-cache class="gov.pr.celepar.tabeliao.pojo.CertificadoAc" usage="read-write"/>
+  <class-cache class="gov.pr.celepar.tabeliao.pojo.CertificadoPublico" usage="read-write"/>
+  <class-cache class="gov.pr.celepar.tabeliao.pojo.CertificadoRevogado" usage="read-write"/>
+ </session-factory>
+</hibernate-configuration>
