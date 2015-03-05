@@ -1,0 +1,27 @@
+/*C3*/SET SCHEMA PUBLIC
+CONNECT USER SA
+DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+CONNECT USER SA
+DROP TABLE BOOKMARK
+CREATE TABLE BOOKMARK (ID BIGINT NOT NULL, DESCRIPTION VARCHAR, LINK VARCHAR, PRIMARY KEY (ID))
+DELETE FROM SEQUENCE WHERE SEQ_NAME='SEQ_GEN'
+INSERT INTO SEQUENCE VALUES('SEQ_GEN',0)
+SET AUTOCOMMIT FALSE
+DELETE FROM SEQUENCE WHERE SEQ_NAME='SEQ_GEN'
+INSERT INTO SEQUENCE VALUES('SEQ_GEN',50)
+COMMIT
+SET AUTOCOMMIT TRUE
+SET AUTOCOMMIT FALSE
+INSERT INTO BOOKMARK VALUES(4,'Blog','http://blog.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(10,'Downloads','http://download.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(7,'Forum','http://forum.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(6,'Bug Tracking','http://tracker.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(8,'SVN','http://svn.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(9,'Maven','http://repository.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(3,'Twitter','http://twitter.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(5,'Wiki','http://wiki.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(2,'Demoiselle SourceForge','http://sf.net/projects/demoiselle')
+INSERT INTO BOOKMARK VALUES(1,'Demoiselle Portal','http://www.frameworkdemoiselle.gov.br')
+COMMIT
+SET AUTOCOMMIT TRUE

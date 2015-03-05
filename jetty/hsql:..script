@@ -1,0 +1,19 @@
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+CREATE SEQUENCE SEQ_GEN_SEQUENCE AS INTEGER START WITH 200 INCREMENT BY 50 
+CREATE MEMORY TABLE SEQUENCE(SEQ_NAME VARCHAR(50) NOT NULL PRIMARY KEY,SEQ_COUNT NUMERIC(38))
+CREATE MEMORY TABLE BOOKMARK(ID BIGINT NOT NULL PRIMARY KEY,DESCRIPTION VARCHAR,LINK VARCHAR)
+CREATE USER SA PASSWORD ""
+GRANT DBA TO SA
+SET WRITE_DELAY 10
+SET SCHEMA PUBLIC
+INSERT INTO SEQUENCE VALUES('SEQ_GEN',50)
+INSERT INTO BOOKMARK VALUES(1,'Demoiselle Portal','http://www.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(2,'Demoiselle SourceForge','http://sf.net/projects/demoiselle')
+INSERT INTO BOOKMARK VALUES(3,'Twitter','http://twitter.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(4,'Blog','http://blog.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(5,'Wiki','http://wiki.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(6,'Bug Tracking','http://tracker.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(7,'Forum','http://forum.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(8,'SVN','http://svn.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(9,'Maven','http://repository.frameworkdemoiselle.gov.br')
+INSERT INTO BOOKMARK VALUES(10,'Downloads','http://download.frameworkdemoiselle.gov.br')
