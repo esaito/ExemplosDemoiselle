@@ -1,0 +1,71 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<h:form prependId="false">
+			<p:toolbar>
+				<p:toolbarGroup align="left">
+					<p:commandButton value="#{messages['button.save']}" action="#{produtoEditMB.insert}"
+						rendered="#{!produtoEditMB.updateMode}" ajax="false" />
+					<p:commandButton value="#{messages['button.save']}" action="#{produtoEditMB.update}"
+						rendered="#{produtoEditMB.updateMode}" ajax="false" />
+					<p:commandButton value="#{messages['button.delete']}" onclick="confirmation.show()"
+						rendered="#{produtoEditMB.updateMode}" type="button" immediate="true" ajax="false" />
+					<p:confirmDialog message="#{messages['label.confirm.delete']}" showEffect="bounce" hideEffect="explode"
+						header="#{messages['label.dialog.delete']}" severity="alert" widgetVar="confirmation">
+						<h:commandButton value="#{messages['button.dialog.yes']}" action="#{produtoEditMB.delete}" immediate="true"
+							ajax="false" />
+						<h:commandButton value="#{messages['button.dialog.no']}" onclick="confirmation.hide()" type="button" />
+					</p:confirmDialog>
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<br />
+
+			<p:fieldset legend="#{messages['produto.label']}" toggleable="true" toggleSpeed="500">
+				<h:panelGrid id="fieldsproduto" columns="3">
+				
+					<h:outputLabel value="#{messages['produto.label.id']}: " for="id" styleClass="text-input" />
+										
+					<h:outputText id="id" value="#{produtoEditMB.bean.id}" />
+					
+					<p:message for="id" />
+						
+					<h:outputLabel value="#{messages['produto.label.nome']}: " for="nome" styleClass="text-input" />
+					
+					<h:inputText id="nome" value="#{produtoEditMB.bean.nome}"
+						title="#{messages['produto.alt.nome']}" />
+					
+					<p:message for="nome" />
+						
+					<h:outputLabel value="#{messages['produto.label.preco']}: " for="preco" styleClass="text-input" />
+					
+					<p:inputText id="preco" value="#{produtoEditMB.bean.preco}"
+						title="#{messages['produto.alt.preco']}" >
+						<f:convertNumber type="currency" currencySymbol="R$"/>
+            		</p:inputText>
+					
+					<p:message for="preco" />
+					
+					<h:outputLabel value="#{messages['produto.label.quantidade']}: " for="quantidade" styleClass="text-input" />
+					
+					<h:inputText id="quantidade" value="#{produtoEditMB.bean.quantidade}"
+						title="#{messages['produto.alt.quantidade']}" />
+					
+					<p:message for="quantidade" />
+						
+					<h:outputLabel value="#{messages['produto.label.descricao']}: " for="descricao" styleClass="text-input" />
+					
+					<h:inputText id="descricao" value="#{produtoEditMB.bean.descricao}"
+						title="#{messages['produto.alt.descricao']}" />
+					
+					<p:message for="descricao" />
+						
+				</h:panelGrid>
+			</p:fieldset>
+			
+		</h:form>
+	</ui:define>
+</ui:composition>
