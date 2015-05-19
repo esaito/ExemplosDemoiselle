@@ -3,6 +3,14 @@
 
 	<h:form>
 		<p:menubar>
+			<p:submenu label="#{messages['menu.revInfo']}">
+				<p:menuitem value="#{messages['menu.menuitem.list']}" url="/revInfo_list.jsf"></p:menuitem>
+			</p:submenu>
+
+			<p:submenu label="#{messages['menu.estudanteAuditoria']}">
+				<p:menuitem value="#{messages['menu.menuitem.list']}" url="/estudanteAuditoria_list.jsf"></p:menuitem>
+			</p:submenu>
+
 			<p:submenu label="#{messages['menu.estudante']}">
 				<p:menuitem value="#{messages['menu.menuitem.new']}" url="/estudante_edit.jsf"></p:menuitem>
 				<p:menuitem value="#{messages['menu.menuitem.list']}" url="/estudante_list.jsf"></p:menuitem>

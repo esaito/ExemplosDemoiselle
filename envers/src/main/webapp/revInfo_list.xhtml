@@ -1,0 +1,32 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<h:form>
+			<p:dataTable id="list" var="bean" value="#{revInfoListMB.resultList}">
+				<f:facet name="header">#{messages['revInfo.list.table.title']}</f:facet>
+				<p:column style="width:2%;">
+					<h:selectBooleanCheckbox value="#{revInfoListMB.selection[bean.codRev]}"></h:selectBooleanCheckbox>
+				</p:column>
+				
+				<p:column style="width:5%;" sortBy="#{bean.codRev}">
+					<f:facet name="header">#{messages['revInfo.label.codRev']}</f:facet>
+					<h:outputText value="#{bean.codRev}" />
+				</p:column>
+						
+				<p:column sortBy="#{bean.dataRevisao}">
+					<f:facet name="header">#{messages['revInfo.label.dataRevisao']}</f:facet>
+						<h:outputText value="#{bean.dataRevisao}" />
+				</p:column>
+					
+				<p:column sortBy="#{bean.ip}">
+					<f:facet name="header">#{messages['revInfo.label.ip']}</f:facet>
+						<h:outputText value="#{bean.ip}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

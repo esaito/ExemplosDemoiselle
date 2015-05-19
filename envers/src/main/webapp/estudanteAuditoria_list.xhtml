@@ -1,0 +1,71 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<h:form>
+			<p:toolbar>
+				<p:toolbarGroup align="left">
+					<p:commandButton title="#{messages['button.new']}" icon="ui-icon-document" action="#{estudanteAuditoriaListMB.getNextView}"
+						actionListener="#{estudanteAuditoriaListMB.clear}" ajax="false" />
+
+					<p:commandButton title="#{messages['button.delete']}" icon="ui-icon-trash" onclick="confirmation.show()"
+						type="button" immediate="true" ajax="false" />
+
+					<p:confirmDialog message="#{messages['label.confirm.delete']}" showEffect="bounce" hideEffect="explode"
+						header="#{messages['label.dialog.alert']}!" severity="alert" widgetVar="confirmation">
+
+						<h:commandButton value="#{messages['button.dialog.yes']}" action="#{estudanteAuditoriaListMB.deleteSelection}"
+							actionListener="#{estudanteAuditoriaListMB.clear}" />
+						<h:commandButton value="#{messages['button.dialog.no']}" onclick="confirmation.hide()" type="button" />
+					</p:confirmDialog>
+				</p:toolbarGroup>
+			</p:toolbar>
+			<p:dataTable id="list" var="bean" value="#{estudanteAuditoriaListMB.resultList}">
+				<f:facet name="header">#{messages['estudanteAuditoria.list.table.title']}</f:facet>
+			
+				<p:column style="width:5%;" sortBy="#{bean.id}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.id']}</f:facet>
+					<h:outputText value="#{bean.id}" />
+				</p:column>
+						
+				<p:column style="width:5%;" sortBy="#{bean.rev}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.rev']}</f:facet>
+					<h:outputText value="#{bean.rev}" />
+				</p:column>
+						
+				<p:column sortBy="#{bean.cpf}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.cpf']}</f:facet>
+					<h:outputText value="#{bean.cpf}" />
+				</p:column>
+					
+				<p:column sortBy="#{bean.nome}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.nome']}</f:facet>
+						<h:outputText value="#{bean.nome}" />
+				</p:column>
+					
+				<p:column sortBy="#{bean.dataNascimento}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.dataNascimento']}</f:facet>
+						<h:outputText value="#{bean.dataNascimento}" />
+				</p:column>
+					
+				<p:column sortBy="#{bean.genero}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.genero']}</f:facet>
+						<h:outputText value="#{bean.genero}" />
+				</p:column>
+					
+				<p:column sortBy="#{bean.dataMatricula}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.dataMatricula']}</f:facet>
+						<h:outputText value="#{bean.dataMatricula}" />
+				</p:column>
+					
+				<p:column sortBy="#{bean.numeroMatricula}">
+					<f:facet name="header">#{messages['estudanteAuditoria.label.numeroMatricula']}</f:facet>
+						<h:outputText value="#{bean.numeroMatricula}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

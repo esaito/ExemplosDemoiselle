@@ -1,4 +1,4 @@
-package org.demoiselle.envers.auditoria;
+package org.demoiselle.envers.domain;
 
 import java.io.Serializable;
 import java.text.DateFormat;
@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import org.demoiselle.envers.auditoria.RevInfoListener;
 import org.hibernate.envers.*;
 
 @Entity
@@ -27,7 +28,7 @@ public class RevInfo implements Serializable {
 	private String ip;
 	
 	
-	public RevInfo(Date dataRevisao, String nomeUsuario, String ip) {
+	public RevInfo(Date dataRevisao, String ip) {
 		super();
 		this.dataRevisao = dataRevisao;
 		this.ip = ip;

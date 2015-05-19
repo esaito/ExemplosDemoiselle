@@ -9,6 +9,10 @@
 
 			<class>org.demoiselle.envers.domain.Estudante</class>
 		
+			<class>org.demoiselle.envers.domain.EstudanteAuditoria</class>
+		
+			<class>org.demoiselle.envers.domain.RevInfo</class>
+		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
 			<property name="javax.persistence.jdbc.user" value="sa" />

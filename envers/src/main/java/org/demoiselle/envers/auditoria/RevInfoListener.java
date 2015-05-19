@@ -3,6 +3,7 @@ package org.demoiselle.envers.auditoria;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 
+import org.demoiselle.envers.domain.RevInfo;
 import org.hibernate.envers.RevisionListener;
 
 public class RevInfoListener implements RevisionListener {

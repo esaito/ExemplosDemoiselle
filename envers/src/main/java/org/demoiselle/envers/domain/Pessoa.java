@@ -1,9 +1,13 @@
 package org.demoiselle.envers.domain;
 
 import java.util.Date;
+
 import javax.persistence.*;
 
+import org.hibernate.envers.Audited;
+
 @MappedSuperclass
+@Audited
 public abstract class Pessoa {
 
 	@Id
