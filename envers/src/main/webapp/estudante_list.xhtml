@@ -1,0 +1,88 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<h:form>
+			<p:toolbar>
+				<p:toolbarGroup align="left">
+					<p:commandButton title="#{messages['button.new']}" icon="ui-icon-document" action="#{estudanteListMB.getNextView}"
+						actionListener="#{estudanteListMB.clear}" ajax="false" />
+
+					<p:commandButton title="#{messages['button.delete']}" icon="ui-icon-trash" onclick="confirmation.show()"
+						type="button" immediate="true" ajax="false" />
+
+					<p:confirmDialog message="#{messages['label.confirm.delete']}" showEffect="bounce" hideEffect="explode"
+						header="#{messages['label.dialog.alert']}!" severity="alert" widgetVar="confirmation">
+
+						<h:commandButton value="#{messages['button.dialog.yes']}" action="#{estudanteListMB.deleteSelection}"
+							actionListener="#{estudanteListMB.clear}" />
+						<h:commandButton value="#{messages['button.dialog.no']}" onclick="confirmation.hide()" type="button" />
+					</p:confirmDialog>
+				</p:toolbarGroup>
+			</p:toolbar>
+			<p:dataTable id="list" var="bean" value="#{estudanteListMB.resultList}">
+				<f:facet name="header">#{messages['estudante.list.table.title']}</f:facet>
+				<p:column style="width:2%;">
+					<h:selectBooleanCheckbox value="#{estudanteListMB.selection[bean.id]}"></h:selectBooleanCheckbox>
+				</p:column>
+				
+				<p:column sortBy="#{bean.dataMatricula}">
+					<f:facet name="header">#{messages['estudante.label.dataMatricula']}</f:facet>
+					<h:commandLink action="#{estudanteListMB.getNextView}" actionListener="#{estudanteListMB.clear}">
+						<h:outputText value="#{bean.dataMatricula}" />
+						<f:param name="id" value="#{bean.id}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.numeroMatricula}">
+					<f:facet name="header">#{messages['estudante.label.numeroMatricula']}</f:facet>
+					<h:commandLink action="#{estudanteListMB.getNextView}" actionListener="#{estudanteListMB.clear}">
+						<h:outputText value="#{bean.numeroMatricula}" />
+						<f:param name="id" value="#{bean.id}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column style="width:5%;" sortBy="#{bean.id}">
+					<f:facet name="header">#{messages['estudante.label.id']}</f:facet>
+					<h:outputText value="#{bean.id}" />
+				</p:column>
+						
+				<p:column sortBy="#{bean.cpf}">
+					<f:facet name="header">#{messages['estudante.label.cpf']}</f:facet>
+					<h:commandLink action="#{estudanteListMB.getNextView}" actionListener="#{estudanteListMB.clear}">
+						<h:outputText value="#{bean.cpf}" />
+						<f:param name="id" value="#{bean.id}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.nome}">
+					<f:facet name="header">#{messages['estudante.label.nome']}</f:facet>
+					<h:commandLink action="#{estudanteListMB.getNextView}" actionListener="#{estudanteListMB.clear}">
+						<h:outputText value="#{bean.nome}" />
+						<f:param name="id" value="#{bean.id}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.dataNascimento}">
+					<f:facet name="header">#{messages['estudante.label.dataNascimento']}</f:facet>
+					<h:commandLink action="#{estudanteListMB.getNextView}" actionListener="#{estudanteListMB.clear}">
+						<h:outputText value="#{bean.dataNascimento}" />
+						<f:param name="id" value="#{bean.id}" />
+					</h:commandLink>
+				</p:column>
+					
+				<p:column sortBy="#{bean.genero}">
+					<f:facet name="header">#{messages['estudante.label.genero']}</f:facet>
+					<h:commandLink action="#{estudanteListMB.getNextView}" actionListener="#{estudanteListMB.clear}">
+						<h:outputText value="#{bean.genero}" />
+						<f:param name="id" value="#{bean.id}" />
+					</h:commandLink>
+				</p:column>
+					
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>
