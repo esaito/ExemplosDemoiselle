@@ -1,0 +1,16 @@
+ <html xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:ui="http://java.sun.com/jsf/facelets"> 
+	<h:body>
+		<h:form>
+				<h:panelGrid columns="3">
+					<h:outputLabel for="username" value="usuário" />
+					<h:inputText id="username" value="#{loginMB.usuario}" />
+					<h:outputText value="usuário = secretaria" />
+					<h:outputLabel for="password" value="senha" />
+					<h:inputSecret id="password" value="#{loginMB.senha}" />
+					<h:outputText value="senha = segredo" />
+					<h:commandButton value="Entrar" action="#{loginMB.doLogin}" />
+				</h:panelGrid>
+			</h:form>
+	</h:body>
+</html>

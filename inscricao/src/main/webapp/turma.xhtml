@@ -1,0 +1,21 @@
+<html xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+ 	<h:messages />
+       	<h:form>
+    		Nome do aluno
+    		<h:inputText id="nomeAluno" value="#{turmaMB.nomeAluno}"/>
+  	  		<h:commandButton value="Matricular" action="#{turmaMB.matricular()}" />
+		</h:form>
+    <h:body>
+        <h:dataTable id="lista" var="aluno" value="#{turmaMB.alunosMatriculados}">
+        	<h:column>
+                <h:outputText value="Texto" />
+            </h:column>
+            <h:column>
+                <h:outputText value="#{aluno.matricula}" />
+            </h:column>
+            <h:column>
+                <h:outputText value="#{aluno.nome}" />
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html> 
