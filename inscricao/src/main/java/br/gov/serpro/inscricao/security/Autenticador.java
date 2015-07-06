@@ -18,26 +18,23 @@ public class Autenticador implements Authenticator {
 	@Inject
 	private ResourceBundle bundle;
 
-	private static boolean authenticated = false;
+	private static boolean autenticado= false;
 
 	@Override
 	public void authenticate() throws Exception {
 
-		if (credenciais.getNome().equals("secretaria")
-				&& credenciais.getSenha().equals("segredo")) {
-			authenticated = true;
-		}
-		if (!authenticated) {
-			throw new AuthenticationException(
-					bundle.getString("usuarioNaoAutenticado"));
-		}
+		if (credenciais.getNome().equals("secretaria") && credenciais.getSenha().equals("segredo")) {
+			autenticado= true;
+	}else{
+		throw new AuthenticationException(bundle.getString("usuarioNaoAutenticado"));
+	}
 
 	}
 
 	@Override
 	public Principal getUser() {
 
-		if (authenticated) {
+		if (autenticado) {
 
 			return new Principal() {
 
@@ -56,6 +53,6 @@ public class Autenticador implements Authenticator {
 	@Override
 	public void unauthenticate() throws Exception {
 		credenciais.limpar();
-		authenticated = false;
+		autenticado= false;
 	}
 }

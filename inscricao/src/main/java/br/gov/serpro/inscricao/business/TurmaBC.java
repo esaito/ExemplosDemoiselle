@@ -2,8 +2,8 @@ package br.gov.serpro.inscricao.business;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Logger;
 import javax.inject.Inject;
-import org.slf4j.Logger;
 import br.gov.frameworkdemoiselle.exception.ExceptionHandler;
 import br.gov.frameworkdemoiselle.lifecycle.Startup;
 import br.gov.frameworkdemoiselle.message.MessageContext;
@@ -36,9 +36,6 @@ public class TurmaBC implements Serializable {
 	@Inject 
 	private MessageContext messageContext;
 		
-//	@Inject
-//	private CustomAppender customAppender;
-	
 	@Startup
 	public void iniciar(){
 		logger.info(" ***************** Iniciando ...  ******");
@@ -55,10 +52,6 @@ public class TurmaBC implements Serializable {
 		alunoBC.insert(aluno);
 		logger.info(mensagem);
 		messageContext.add(mensagem);
-//		System.out.println("-------- Appender ----------------"+customAppender.getMessages());
-		 
-		
-		
 	}
 
 	@RequiredPermission(resource="aluno", operation="consultar")
@@ -73,7 +66,7 @@ public class TurmaBC implements Serializable {
 	
 	@ExceptionHandler
 	public void tratar(TurmaException e){
-		logger.warn(bundle.getString("matricula.erro"));
+		logger.warning(bundle.getString("matricula.erro"));
 		throw e;
 	}
 	
