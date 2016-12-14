@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
 	<!-- If you are using JBoss AS7 with non JTA transaction then use this persistence-unit -->
-	<!--  HSQL-->
+	<!--  HSQL -->
 
 	<persistence-unit name="artigoJM-pu" transaction-type="RESOURCE_LOCAL">
 		
@@ -125,7 +125,7 @@
 	</persistence-unit>
 	-->
 		<!-- 	Tomcat -->
-	<!-- 
+	<!--
 	
 	  <persistence-unit name="artigoJM-pu" transaction-type="RESOURCE_LOCAL">
 
@@ -146,5 +146,5 @@
         </properties>
     </persistence-unit>
 	
-	-->
+	--> 
 </persistence>

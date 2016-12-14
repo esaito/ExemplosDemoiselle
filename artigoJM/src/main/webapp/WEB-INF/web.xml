@@ -4,11 +4,11 @@
 	version="3.0">
 
  	<!-- If you are using tomcat6/tomcat7/gae then uncomment this listener -->
- 	<!--  	
+ 	<!--   	
 	<listener>
 		<listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
 	</listener>
---> 
+-->
 
  	<!-- If you are using servlet 2.5 then uncomment this listener -->
  	<!--

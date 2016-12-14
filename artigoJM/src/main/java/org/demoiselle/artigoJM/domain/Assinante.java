@@ -44,7 +44,7 @@ public class Assinante implements Serializable {
     @Enumerated(EnumType.STRING)
 	private Genero genero;
     
-    // @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, orphanRemoval=true) OK no eclipselink
+    //@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, orphanRemoval=true) // OK no eclipselink
     @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY) 
 	@JoinColumn(name = "assinante_fk")
     private List<Assinatura> assinaturas = new ArrayList<Assinatura>();

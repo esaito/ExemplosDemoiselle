@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.demoiselle</groupId>
+	<artifactId>applet-customizada</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Applet Customizada</name>
+	<description>Exemplo de Applet customizada do Demoiselle-Certificate</description>
+	<url></url>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.gov.frameworkdemoiselle.component</groupId>
+			<artifactId>demoiselle-junit</artifactId>
+			<version>2.3.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>signature-applet</artifactId>
+			<version>2.0.0-BETA1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>signature-signer</artifactId>
+			<version>2.0.0-BETA1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>signature-policy-engine</artifactId>
+			<version>2.0.0-BETA1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>ca-icpbrasil</artifactId>
+			<version>2.0.0-BETA1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>ca-icpbrasil-homologacao</artifactId>
+			<version>2.0.0-BETA1</version>
+		</dependency>
+		
+		
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Permissions>all-permissions</Permissions>
+							<Application-Name>Applet Customizada Demoiselle</Application-Name>
+							<Built-By>Comunidade Demoiselle</Built-By>
+							<Entry-Point>org.demoiselle.applet_customizada.App</Entry-Point>
+							<Caller-Allowable-Codebase>*</Caller-Allowable-Codebase>
+							<Codebase>*</Codebase>
+							<Application-Library-Allowable-Codebase>*</Application-Library-Allowable-Codebase>
+							<Trusted-Library>true</Trusted-Library>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

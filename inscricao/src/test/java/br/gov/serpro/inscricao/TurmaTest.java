@@ -52,7 +52,7 @@ public class TurmaTest {
 	@Test(expected = TurmaException.class)
 	public void falhaAoTentarMatricularAlunoNaTurmaCheia() {
 		for (int i = 1; i <= 5; i++) {
-			turma.matricular(new Aluno("Aluno " + i));
+			turma.matricular(new Aluno("Aluno " + String.valueOf(i).toString()));
 		}
 
 		turma.matricular(new Aluno("Aluno 6"));

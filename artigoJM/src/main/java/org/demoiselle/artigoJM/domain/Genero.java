@@ -2,26 +2,33 @@ package org.demoiselle.artigoJM.domain;
 
 public enum Genero {
 	
-	MASCULINO("M"), FEMININO("F");
+	MASCULINO("Sexo Masculino"), FEMININO("Sexo Feminino"), OUTRO("Não definido") ;
 
-	private final String value;
+	private String descricao;
 
-	Genero(String value) {
-		this.value = value;
+	Genero(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public static Genero fromValue(String value) {
-		if (value != null) {
-			for (Genero sexo : values()) {
-				if (sexo.value.equals(value)) {
-					return sexo;
-				}
-			}
-		}
-		throw new IllegalArgumentException("Genero invalido: " + value);
+//	public static Genero fromValue(String descricao) {
+//		if (descricao != null) {
+//			for (Genero sexo : values()) {
+//				if (sexo.descricao.equals(descricao)) {
+//					return sexo;
+//				}
+//			}
+//		}
+//		throw new IllegalArgumentException("Genero invalido: " + descricao);
+//	}
+
+
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public String toValue() {
-		return value;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 }
+
+

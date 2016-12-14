@@ -21,7 +21,7 @@ public class Assinatura implements Serializable {
 	@Id
 	//@SequenceGenerator(name = "assinatura_sequence", sequenceName = "assinatura_sequence", allocationSize = 1, initialValue = 0)
 	//@GeneratedValue(strategy = SEQUENCE, generator="assinatura_sequence")
-	@GeneratedValue
+   @GeneratedValue
 	private Long codigoAssinatura;
 	
 	@Column(nullable=false,  length=255)
