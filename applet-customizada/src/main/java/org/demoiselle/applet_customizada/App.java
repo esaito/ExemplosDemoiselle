@@ -54,7 +54,7 @@ public class App extends AbstractAppletExecute {
 			signer.setCertificates(keystore.getCertificateChain(alias));
 			signer.setPrivateKey((PrivateKey) keystore.getKey(alias, null));
 			signer.setSignaturePolicy(PolicyFactory.Policies.AD_RB_CADES_2_2);
-			signer.setAttached(true);
+			signer.setAttached(false);
 
 			/* Realiza a assinatura do conteudo */
 
@@ -92,6 +92,7 @@ public class App extends AbstractAppletExecute {
 					certificado.getEmail());
 		} catch (KeyStoreException | NoSuchAlgorithmException
 				| UnrecoverableKeyException | IOException e) {
+			e.printStackTrace();
 			JOptionPane.showMessageDialog(applet, e.getMessage(), "Error",
 					JOptionPane.ERROR_MESSAGE);
 		} 

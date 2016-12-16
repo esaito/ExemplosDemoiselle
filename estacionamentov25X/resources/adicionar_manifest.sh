@@ -5,7 +5,7 @@ echo "*** modificando os arquivos .jar ..."
 
 # jar ufm jar-file manifest-addition.txt
 
-jar ufm htmlunit-2.15.jar manifest-addition.txt
+jar ufm htmlunit-2.23.jar manifest-addition.txt
 jar ufm log4j-1.2.17.jar manifest-addition.txt
 jar ufm slf4j-log4j12-1.6.1.jar manifest-addition.txt
 jar ufm slf4j-api-1.6.1.jar manifest-addition.txt

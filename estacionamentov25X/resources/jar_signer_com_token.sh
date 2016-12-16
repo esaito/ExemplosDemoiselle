@@ -3,19 +3,19 @@
 clear
 
 #Colocar o caminho do java home
-JAVA_HOME=/usr/lib/jvm/java-6-serpro
+JAVA_HOME=/usr/lib/jvm/java-7-serpro
 
 
 PATH=$JAVA_HOME/bin:$PATH
 
 #Colocar o Pin do Token aqui
-PASSWORD="EsS197402"
+PASSWORD="xxxx"
 
 #NAO ALTERAR!
 DSANAME="SERPRO"
 
 #Apontar para o caminho onde estão os jars  que devem ser assinados
-JARPATH="/home/80621732915/git/laboratory/estacionamento/v25X/resources/libs_demoiselle"
+JARPATH="/home/80621732915/git/ExemplosDemoiselle/estacionamentov25X/resources"
 
 for jarfile in $(ls $JARPATH/*.jar); do
     jarfile_signed="${jarfile%.jar}-assinado.jar"
@@ -31,7 +31,7 @@ for jarfile in $(ls $JARPATH/*.jar); do
 	    
 
     #lista os dados do token, inclusive o apelido
-    # keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 -providerArg drivers.config -storepass $PASSWORD -list
+    keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 -providerArg drivers.config -storepass $PASSWORD -list
 
     #assina o jar
     jarsigner -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 -providerArg drivers.config -storepass $PASSWORD -sigfile $DSANAME -signedjar $jarfile_signed -verbose $jarfile "$ALIAS"

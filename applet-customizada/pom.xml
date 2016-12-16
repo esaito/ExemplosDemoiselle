@@ -7,7 +7,7 @@
 
 	<groupId>org.demoiselle</groupId>
 	<artifactId>applet-customizada</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>Applet Customizada</name>
@@ -31,35 +31,35 @@
 		<dependency>
 			<groupId>org.demoiselle.signer</groupId>
 			<artifactId>signature-applet</artifactId>
-			<version>2.0.0-BETA1</version>
+			<version>${signature.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.demoiselle.signer</groupId>
 			<artifactId>signature-signer</artifactId>
-			<version>2.0.0-BETA1</version>
+			<version>${signature.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.demoiselle.signer</groupId>
 			<artifactId>signature-policy-engine</artifactId>
-			<version>2.0.0-BETA1</version>
+			<version>${signature.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.demoiselle.signer</groupId>
 			<artifactId>ca-icpbrasil</artifactId>
-			<version>2.0.0-BETA1</version>
+			<version>2.0.0-BETA2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.demoiselle.signer</groupId>
 			<artifactId>ca-icpbrasil-homologacao</artifactId>
-			<version>2.0.0-BETA1</version>
+			<version>2.0.0-BETA2</version>
 		</dependency>
-		
-		
-		
+
+
+
 	</dependencies>
 
 	<build>
@@ -78,6 +78,17 @@
 							<Codebase>*</Codebase>
 							<Application-Library-Allowable-Codebase>*</Application-Library-Allowable-Codebase>
 							<Trusted-Library>true</Trusted-Library>
+							<Bundle-SymbolicName>democustom</Bundle-SymbolicName>
+							<Bundle-RequiredExecutionEnvironment> J2SE-1.5, JavaSE-1.6, JavaSE-1.7</Bundle-RequiredExecutionEnvironment>
+							<Implementation-Vendor-Id>org.demoiselle</Implementation-Vendor-Id>
+							<Import-Package>java.applet.Applet;java.io;java.security; javax.swing.JOptionPane;org.demoiselle.signer.signature.applet.action.AbstractAppletExecute; org.demoiselle.signer.signature.applet.certificate.ICPBrasilCertificate;org.demoiselle.signer.signature.signer.factory.PKCS7Factory; org.demoiselle.signer.signature.signer.pkcs7.PKCS7Signer;org.demoiselle.signer.signature.policy.engine.factory.PolicyFactory;org.slf4j</Import-Package>
+							<Export-Package>org.demoiselle.applet_customizada</Export-Package>
+							<Bundle-Name>democustom</Bundle-Name>
+							<Extension-Name>org.demoiselle.applet_customizada</Extension-Name>
+							<Implementation-Version>${project.version}</Implementation-Version>
+							<Specification-Vendor>Demoiselle.org</Specification-Vendor>
+							<Implementation-Vendor>Demoiselle.org</Implementation-Vendor>
+							<Bundle-Version>${project.version}</Bundle-Version>
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -91,4 +102,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
+	<properties>
+		<signature.version>2.0.0-BETA2</signature.version>
+	</properties>
+
 </project>

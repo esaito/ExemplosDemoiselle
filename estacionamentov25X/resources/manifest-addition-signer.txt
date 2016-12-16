@@ -1,0 +1,9 @@
+Permissions: all-permissions
+Caller-Allowable-Codebase: *
+Codebase: *
+Application-Library-Allowable-Codebase: *
+Trusted-Library: true
+Implementation-Vendor-Id: org.demoiselle
+Specification-Vendor: Demoiselle.org
+Implementation-Vendor: Demoiselle.org
+
